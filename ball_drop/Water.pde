@@ -1,12 +1,18 @@
 class Water {
  
- int height;
+ float height;
+ boolean risen;
 
-  Water(int h) {
+  Water(float h) {
     height = h;
+    risen = false;
   }
   
-  void rise(int diameter) {
+  void rise(float diameter) {
+    print(height);
+    height += 3.14 * pow(diameter/2, 3) / display_horizontal;
+    print(height);
+    risen = true;
   }
   
   void display(int display_horizontal, int display_vertical) {

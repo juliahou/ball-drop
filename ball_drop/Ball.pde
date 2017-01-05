@@ -15,8 +15,8 @@ class Ball {
   
   void move() {
     vy += gravity;
-    x += vx;
-    y += vy;
+    x += vx * viscosity;
+    y += vy * viscosity;
     if (x + diameter/2 > width) {
       x = width - diameter/2;
       vx *= friction; 
