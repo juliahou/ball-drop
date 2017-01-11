@@ -1,4 +1,3 @@
-//code from https://processing.org/examples/bouncybubbles.html
 class Ball {
   
   float x, y;
@@ -19,19 +18,19 @@ class Ball {
     y += vy * viscosity;
     if (x + diameter/2 > width) {
       x = width - diameter/2;
-      vx *= friction; 
+      vx = vx * friction; 
     }
     else if (x - diameter/2 < 0) {
       x = diameter/2;
-      vx *= friction;
+      vx = vx * friction;
     }
     if (y + diameter/2 > height) {
       y = height - diameter/2;
-      vy *= friction; 
+      vy = vy * friction; 
     } 
     else if (y - diameter/2 < 0) {
       y = diameter/2;
-      vy *= friction;
+      vy = vy * friction;
     }
   }
   
